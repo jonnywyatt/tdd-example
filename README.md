@@ -1,6 +1,6 @@
-# Agile collaboration exercise (test-driven development)
+# Agile collaboration exercise 
 
-A simple pair-programming exercise for two devs.
+Writing a simple function, guided by a test. An introductory pairing exercise for two devs.
 
 ## Requirements / setup
 Ensure you have Node.js installed
