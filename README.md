@@ -1,6 +1,6 @@
-# Agile collaboration exercise 
+# Test Driven Development beginner exercise
 
-Writing a simple function, guided by a test. An introductory pairing exercise for two devs.
+This exercise will guide you to use tests to help write a simple function.
 
 ## Requirements / setup
 Ensure you have Node.js installed
@@ -8,33 +8,18 @@ Ensure you have Node.js installed
 1. Clone this repo
 2. In your terminal, cd to the repo folder and run `npm i`
 
-## Instructions
-Start in [index.test.js](./index.test.js). This contains an already written test for a new function that we want to write (`sortNumbers`).
+## Steps
+Start in [index.test.js](./index.test.js). This contains an already written test for a function that we want to complete called `sortNumbers` which is in [index.js](./index.js).
 
-1. Read and understand the test together so you have a shared understanding of what the function should do
-2. Now run the tests - in your terminal run `npm run test:watch`. This will re-run the tests automatically as you make changes. If you prefer to re-run them manually each time, first cancel the test runner with CTRL + C, then run `npm run test` instead.
-3. The test will initially fail because the function hasn't been written yet to make it pass. Now, one of the devs writes the function body in [index.js](./index.js) to make the test pass.
-   
-Making tests pass is an addictive game, isn't it..!
+1. Read and understand the first test in [index.test.js](./index.test.js) so you have an understanding of what the test expects the function to do
+2. Now run the test - in your terminal run `npm test`. Every time you save changes, the test in [index.test.js](./index.test.js) will re-run automatically
+3. The test will initially fail because the contents of the `sortNumbers` function in [index.js](./index.js) hasn't been written yet. The test output says that it expected `[1, 2, 6]` but it received `undefined`. This is because `sortNumbers` isn't returning anything yet, so `const result` is set to undefined.
+4. Write some code inside the `sortNumbers` function in [index.js](./index.js) to sort the numbers it receives, and return the sorted array. Save the file and the tests will re-run automatically in your terminal - if you made the correct change to `sortNumbers` then the test will pass.
 
-Next, we want to improve `sortNumbers` so it can sort the numbers it's given, either by lowest-first or highest-first.
+Next, we want to improve the `sortNumbers` function so it can sort the numbers it's given either by lowest-first or highest-first.
 
-4. The second dev writes a test in [index.test.js](./index.test.js) to ask the function to sort by highest-first, by passing a second parameter to it (eg passing `true` will ask the function to sort the numbers in ascending order and passing `false` asks it to sort them in descending order. Use the same technique as in the first test - call the function and assign the return value to a variable. Then make an 'assertion' about the return value, using `expect()`. The new test will fail when you run it.
-5. Now back to the first dev - alter the `sortNumbers` function so the new test passes, and the first test keeps passing.
-
-## Extension exercises / tips
-
-Think of another function that you could describe with tests before writing it to turn the tests green.
-eg how about a function that accepts a parameter that is a series of words and returns it with each word starting with a capital letter?
-- Input parameter: 'hi there'
-- Return value 'Hi There'
-
-Or, think of your own function. *Keep it very simple to begin with*, and build up gradually. This introduction exercise is about learning to write simple functions driven by tests, not to try overly ambitious functions (at this stage anyway!). 
-
-But later on, when you're confident using this technique ('test-driven development' or TDD) with simple functions, you'll find it really shines when writing more complex functions. You'll know instantly when you've broken something, and you'll be able to change your code with confidence. 
-  
-Bear in mind these tips:
-- 
-- while you're still new to the technique, only write a pure function (they simply accept parameters, and return a value. They don't call out to other functions, or change other variables that are declared outside of themselves.)
-- write a test, make it pass, then write another test describing useful functionality that you want the code to have. Maybe that test will pass without any more changes to the code, or maybe you need to write more code to make it pass.
-- after you've made a test pass, think about anything you could do to improve your code while keeping the test passing (if there isn't, no problem, especially for very simple functions). This cycle is called 'red-green-refactor' - start with a failing test, make it pass, then improve the code.
+5. There's a second test in [index.test.js](./index.test.js) to ask the function to sort by highest-first, by passing a second parameter to it (eg passing `true` will ask the function to sort the numbers in ascending order and passing `false` asks it to sort them in descending order.
+Remove `.skip` from the title of the second test. Use the same technique in the second test as is used in the first test - call the function and assign the return value to a variable. Then make an 'assertion' about the return value, using `expect()`. 
+The new test will fail when you run it.
+6. Now alter the `sortNumbers` function so the second test passes
+7. The change you made to `sortNumbers` might have caused your first test to stop passing, so update the first test to pass the correct second parameter to `sortNumbers`, so that the test now passes.

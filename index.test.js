@@ -7,10 +7,11 @@ describe('sortNumbers', () => {
   })
 
   // after you make the above test pass, fill out the second test below by copying from the test above and modifying the call to sortNumbers
+  // First, remove .skip from the test title
   // Now we want to pass a second parameter to sortNumbers
   // if we pass true, we expect the returned list to be sorted by lowest to highest
   // if we pass false, we expect the returned list to be sorted by highest to lowest
-  it('returns the numbers as sorted array with highest value first, if second param is false', () => {
+  it.skip('returns the numbers as sorted array with highest value first, if second param is false', () => {
 
   })
 

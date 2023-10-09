@@ -4,8 +4,7 @@
   "description": "Simple example exercise for javascript testing",
   "main": "index.js",
   "scripts": {
-    "test:watch": "jest --watchAll",
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "author": "Jon Wyatt",
   "license": "ISC",
